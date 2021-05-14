@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Landing page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="grid">
+            <div class="gridline"> </div>
+            <div class="gridline"> </div>
+            <div class="gridline"> </div>
+            <div class="gridline"> </div>
+            <div class="gridline"> </div>
+            <div class="gridline"> </div>
+            <div class="gridline"> </div>
+            <div class="gridline"> </div>
+            <div class="gridline"> </div>
+            <div class="gridline"> </div>
+            <div class="gridline"> </div>
+        </div>
+
+        <div id="bgText">
+            EDDIE<br>BOSS
+        </div>
+
+        <div id="logo">
+            <!-- <img src="images/brain.png" alt=""> -->
+        </div>
+
+        <div id="menu">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Services</li>
+                <li>Project</li>
+            </ul>
+        </div>
+
+        <div id="imgs">
+            <img src="images/1_yayuby.png" id="img1" alt="">
+            <img src="images/2_dje4cw.png" id="img2" alt="">
+            <img src="images/3_fvmsna.png" id="img3" alt="">
+            <img src="images/4_iuxzwj.png" id="img4" alt="">
+        </div>
+    </div>
+
+    <script src="resources/jquery-3.6.0.js"></script>
+    <script>
+        var obj1 = $('#img2');
+        var obj2 = $('#img4');
+
+        var layer = $('#main');
+
+        layer.mousemove(function (e) {
+            var valueX = (e.pageX * -1 / 20);
+            var valueY = (e.pageY * -1 / 20);
+
+            obj1.css({
+                'transform': 'translate(-50%, -50%) translate3d(' + valueX + 'px,' + valueY + 'px,0)'
+            });
+        });
+
+        layer.mousemove(function (e) {
+            var valueX = (e.pageX * -1 / 50);
+            var valueY = (e.pageY * -1 / 50);
+
+            obj2.css({
+                'transform': 'translate(-50%, -50%) translate3d(' + valueX + 'px,' + valueY + 'px,0)'
+            });
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
